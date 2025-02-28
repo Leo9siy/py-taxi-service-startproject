@@ -19,7 +19,7 @@ class Driver(AbstractUser):
     last_name = models.CharField(max_length=100)
 
     class Meta:
-        pass
+        ordering = ("last_name", "first_name")
 
     def __str__(self) -> str:
         return f"{self.first_name} {self.last_name} {self.license_number}"
